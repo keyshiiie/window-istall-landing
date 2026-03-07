@@ -1,0 +1,16 @@
+// Нормализация
+@use 'modern-normalize';
+
+// Миксины, шрифты и переменные
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/fonts' as *;
+
+// База
+@use 'base/base';
+
+// Слои
+@use 'layout/header';
+
+// стили кнопочек и компонентов
+@use 'components/buttons'
