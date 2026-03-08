@@ -1,0 +1,53 @@
+@use '../abstracts/variables' as *;
+
+// Миксин для разных начертаний
+@mixin font-style($weight: light, $size: base) {
+    font-family: 'Geometria', sans-serif;
+    
+    // Толщина
+    @if $weight == light {
+        font-weight: $font-weight-light;
+    } @else if $weight == medium {
+        font-weight: $font-weight-medium;
+    } @else if $weight == bold {
+        font-weight: $font-weight-bold;
+    }
+    
+    // Размер
+    @if $size == xs {
+        font-size: $font-size-xs;
+    } @else if $size == sm {
+        font-size: $font-size-sm;
+    } @else if $size == base {
+        font-size: $font-size-base;
+    } @else if $size == md {
+        font-size: $font-size-md;
+    } @else if $size == lg {
+        font-size: $font-size-lg;
+    } @else if $size == xl {
+        font-size: $font-size-xl;
+    } @else if $size == xxl {
+        font-size: $font-size-xxl;
+    }
+}
+
+// Базовые flex-миксины
+@mixin flex($justify: null, $align: null, $direction: null, $wrap: null) {
+    display: flex;
+    
+    @if $justify {
+        justify-content: $justify;
+    }
+    
+    @if $align {
+        align-items: $align;
+    }
+    
+    @if $direction {
+        flex-direction: $direction;
+    }
+    
+    @if $wrap {
+        flex-wrap: $wrap;
+    }
+}

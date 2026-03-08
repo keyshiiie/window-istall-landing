@@ -1,20 +1,19 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .header {
-    background: $white;
+    position: relative;
+    z-index: 2;  // хедер выше фона
 
     &__top{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-    }
+        background: $white;
+        @include flex(space-between,center);
+        padding: 10px 0;
 
-    &__top-row{
-        display: flex;
-        align-items: center;
-        column-gap: 80px;
-
+        &-row{
+            @include flex($align: center);
+            column-gap: $gap-xxl;
+        }
     }
 
     &__logo{
@@ -23,7 +22,7 @@
         &::after{
             content: '';
             position: absolute;
-            right: -40px; // половина от column-gap: 80px;
+            right: -40px; // половина от column-gap (80px)
             top: 50%;
             transform: translateY(-50%);
             width: 2px;
@@ -34,14 +33,12 @@
 
     &__schedule-text{
         color: $gray-primary;
-        font-size: $font-size-sm;
-        font-weight: $font-weight-light;
+        @include font-style(light, sm);
         line-height: 1;
-        flex-direction: column;
-        display: flex;
+        @include flex($direction: column);
     }
 
-    &__schedule-line {
+    &__schedule-line{
         line-height: 1.3;
 
         &:first-child{
@@ -51,30 +48,27 @@
     }
 
     &__contacts{
-        display: flex;
-        column-gap: 30px;
-        align-items: center;
-    }
+        column-gap: $gap-base;
+        @include flex($align: center);
 
-    &__contacts-phone{
+        &-phone{
         color: $gray-primary;
-        font-size: $font-size-lg;
+        @include font-style(medium, lg);
+        }
     }
 
     &__bottom{
-        background: $dark-primary;
-        padding: 35px 0;
+        background: transparent;
+        padding: 25px 0;
     }
 
     &__nav-list{
-        display: flex;
-        justify-content: space-between;
+        @include flex(space-between, center);
     }
 
     &__nav-link{
         color: $white;
-        font-weight: $font-weight-light;
-        font-size: $font-size-sm;
+        @include font-style(light, sm);
 
         &:hover {
             color: darken($white, 20%);
