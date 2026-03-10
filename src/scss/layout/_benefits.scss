@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.benefits{
+    padding: 80px 0;
+    position: relative;  // для позиционирования псевдоэлемента
+
+    // Фоновое изображение
+    &::before {
+        content: '';
+        position: absolute;
+        top: -70px;  // поднимаем выше, чтобы зайти под header__bottom
+        left: 0;
+        width: 100%;
+        height: calc(100% + 100px);  // увеличиваем высоту
+        background-image: url('/public/images/content/benefits-background.jpg');
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    &__title{
+        @include section-title($white);
+    }
+}

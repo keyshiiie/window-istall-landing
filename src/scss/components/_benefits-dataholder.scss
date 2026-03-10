@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
+
+.benefits{
+    &__card-holder{
+        margin-top: 60px;
+        @include flex(space-between);
+    }
+    &__card{
+        max-width: 265px;
+        text-align: center;
+
+        &-title{
+            @include font-style(bold, lg);
+            color: $white;
+            margin: 30px 0 15px 0;
+        }
+        &-description{
+            @include font-style(light, base);
+            color: $white;
+            opacity: 0.8;
+            line-height: 2;
+        }
+    }
+}

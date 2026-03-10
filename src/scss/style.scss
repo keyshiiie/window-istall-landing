@@ -16,8 +16,10 @@
 @use 'layout/trade-in';
 @use 'layout/models';
 @use 'layout/characteristic';
+@use 'layout/benefits';
 
 // стили кнопочек и компонентов
 @use 'components/buttons';
 @use 'components/slider';
 @use 'components/characteristics-dataholder';
+@use 'components/benefits-dataholder'
