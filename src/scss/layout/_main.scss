@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
 
 .main {
     padding: 50px 0 150px 0;
@@ -65,99 +66,30 @@
     &__calculator{
 
         &-row{
-            display: flex;
-            column-gap: $gap-sm;
-            margin: 34px 0 17px 0;
+            @extend %calculator-row;
         }
 
         &-input{
-            background: none;
-            border: 2px solid $white;
-            border-radius: $border-radius-sm;    
-            height: 50px;              
-            width: 180px;             
-            color: $white;  
-            text-align: center;  
-            cursor: pointer;
-            
-            &::placeholder {
-                color: $white;
-                font-size: $font-size-base;
-            }
-    
-            &:focus {
-                outline: none;
-                border-color: $blue-accent; 
-            }
+            @extend %calculator-input;
         }
     }
 
     &__agreement{
         &-label{
-            @include flex($align:center);
-            margin-bottom: 40px;
-            cursor: pointer;
-            position: relative;
+            @extend %agreement-label;
         }
 
         // Прячем стандартный чекбокс
         &-checkbox{
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            border: 0;
-            white-space: nowrap;
-            clip-path: inset(100%);
-            clip: rect(0 0 0 0);
-            overflow: hidden;
-            
-            // Стили для кастомного чекбокса
-            & + span {
-                position: relative;
-                padding-left: 30px;  // место для кастомного чекбокса
-                color: $white;
-                @include font-style(light, xs);
-                
-                // Кастомный чекбокс
-                &::before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 12px;
-                    height: 12px;
-                    border: 1px solid $white;
-                    background: transparent;  // прозрачный фон
-                    border-radius: $border-radius-ssm;       // небольшое скругление
-                }
-            }
-            
-            // Стили для отмеченного чекбокса
-            &:checked + span::before {
-                background: transparent;  // фон остается прозрачным
-            }
-            
-            // Белая галочка
-            &:checked + span::after {
-                content: '';
-                position: absolute;
-                left: 5px;          // позиция галочки
-                top: 7.5px;
-                transform: translateY(-50%) rotate(45deg);
-                width: 3px;
-                height: 6px;
-                border: solid $white;
-                border-width: 0 2px 2px 0;
+            @extend %agreement-checkbox-hidden;
             }
         }
-    }
 
     &__gift{
         @include flex($align:center);
         column-gap: $gap-xs;
-
+        margin-top: 40px;
+        
         &-text{
             color: $white;
             @include font-style(medium, base);
@@ -173,15 +105,14 @@
     }
 
     &__card{
-        text-align: center;
-        row-gap: $gap-xs;
-        text-align: center;
+        @extend %card;
 
         &-text{
-            color: $white;
-            @include font-style(light, base);
-            max-width: 125px;
-            text-align: center;
+            @extend %card-text;
         }
+    }
+
+    &__calculator-button{
+        @include button-fill($blue-accent, $blue-hover);
     }
 }

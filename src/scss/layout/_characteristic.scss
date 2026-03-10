@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.characteristic{
+    background: $blue-accent;
+    padding: 70px 0 100px 0;
+
+    &__title{
+        @include section-title($white);
+    }
+}

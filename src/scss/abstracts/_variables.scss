@@ -2,11 +2,14 @@
 $gray-primary: #898989;
 $dark-primary: #111516;
 $white: #FFFFFF;
+$white-hover: #DFDFDF;
 $blue-accent: #33C5F3;
+$blue-hover: #2EB1DA;
 $turquoise: #1C3D47;
 $gradient-top: #0B2E38;
 $gradient-center: #354A51;
 $gradient-bottom: #314A52;
+$gray-dark:#898989;
 
 // размеры шрифтов
 $font-size-xs: 12px;    // очень маленький (подписи)
@@ -31,10 +34,12 @@ $border-radius-xxl: 150px;  // большое
 $border-radius-circle: 50%;  // круг
 
 // оступы
-$gap-xs: 10px;   
-$gap-sm: 20px;  
+$gap-xs: 10px;  
+$gap-xxs: 15px;
+$gap-sm: 20px;
+$gap-sbase: 25px; 
 $gap-base: 30px;  
-$gap-md: 0px;  
+$gap-md: 40px;  
 $gap-lg: 0px;    
 $gap-xl: 0px;    
 $gap-xxl: 80px;  

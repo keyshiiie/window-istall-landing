@@ -51,3 +51,29 @@
         flex-wrap: $wrap;
     }
 }
+
+// для кнопки с фоном
+@mixin button-fill($bg-color, $hover-color, $text-color: $white) {
+    background: $bg-color;
+    color: $text-color;
+    border: 2px solid $bg-color;
+    
+    &:hover {
+        background: $hover-color;
+        border-color: $hover-color;
+    }
+}
+
+// для заголовка секций
+@mixin section-title($color: $dark-primary) {
+    text-align: center;
+    @include font-style(bold, xxl);
+    color: $color;
+}
+
+// для описания секции
+@mixin section-description($color: $dark-primary){
+    color: $color;
+    text-align: center;
+    @include font-style(light, base);
+}

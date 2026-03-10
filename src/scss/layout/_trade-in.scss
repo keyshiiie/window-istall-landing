@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
+
+.trade-in {
+    @include flex($direction: column, $align: center);
+    padding: 70px 0;
+    background-color: $blue-accent;
+    
+    &__title {
+        @include section-title($white);
+    }
+    
+    &__description {
+        @include section-description($white);
+    }
+    
+    // Переиспользуем те же стили!
+    &__calculator-row {
+        @extend %calculator-row;
+        justify-content: center;
+    }
+    
+    &__calculator-input {
+        @extend %calculator-input;
+    }
+    
+    &__agreement-label {
+        @extend %agreement-label;
+        justify-content: center;
+    }
+    
+    &__agreement-checkbox {
+        @extend %agreement-checkbox-hidden;
+    }
+
+    &__calculator-button{
+        @include button-fill($white, $white-hover, $blue-accent);
+    }
+}

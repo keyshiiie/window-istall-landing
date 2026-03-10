@@ -1,0 +1,110 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+// калькулятор - форма ввода номера 
+
+// Ряд с инпутом и кнопкой
+%calculator-row {
+    display: flex;
+    column-gap: $gap-sm;
+    margin: 34px 0 17px 0;
+}
+
+// Инпут для телефона
+%calculator-input {
+    background: none;
+    border: 2px solid $white;
+    border-radius: $border-radius-sm;    
+    height: 50px;              
+    width: 180px;             
+    color: $white;  
+    text-align: center;  
+    cursor: pointer;
+    
+    &::placeholder {
+        color: $white;
+        font-size: $font-size-base;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $blue-accent; 
+    }
+}
+
+// для чек бокса
+
+// Лейбл чекбокса
+%agreement-label {
+    @include flex($align:center);
+    cursor: pointer;
+    position: relative;
+}
+
+// Скрытый нативный чекбокс
+%agreement-checkbox-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    
+    // Кастомный чекбокс
+    & + span {
+        position: relative;
+        padding-left: 20px;
+        color: $white;
+        @include font-style(light, xs);
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border: 1px solid $white;
+            background: transparent;
+            border-radius: $border-radius-ssm;
+        }
+    }
+    
+    // Галочка для отмеченного
+    &:checked + span::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 7.5px;
+        transform: translateY(-50%) rotate(45deg);
+        width: 3px;
+        height: 6px;
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+    }
+}
+
+// для карточек
+
+%cards-grid {
+    background: rgba($turquoise, 0.3);
+    border-radius: $border-radius-xxl;
+    padding: 55px 70px;
+    row-gap: $gap-base;
+    display: grid;
+}
+
+%card {
+    text-align: center;
+    row-gap: $gap-xs;
+}
+
+%card-text {
+    color: $white;
+    @include font-style(light, base);
+    max-width: 125px;
+    text-align: center;
+}

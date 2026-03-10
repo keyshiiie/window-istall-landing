@@ -5,6 +5,7 @@
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
 @use 'abstracts/fonts' as *;
+@use 'abstracts/placeholders' as *;
 
 // База
 @use 'base/base';
@@ -12,6 +13,11 @@
 // Слои
 @use 'layout/header';
 @use 'layout/main';
+@use 'layout/trade-in';
+@use 'layout/models';
+@use 'layout/characteristic';
 
 // стили кнопочек и компонентов
-@use 'components/buttons'
+@use 'components/buttons';
+@use 'components/slider';
+@use 'components/characteristics-dataholder';

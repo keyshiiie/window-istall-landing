@@ -71,7 +71,11 @@
         @include font-style(light, sm);
 
         &:hover {
-            color: darken($white, 20%);
+            color: $white-hover;
         }
+    }
+
+    &__contacts-button {
+        @include button-fill($blue-accent, $blue-hover);
     }
 }

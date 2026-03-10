@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
+
+.models{
+    &__header{
+        row-gap: $gap-xxs;
+        padding: 70px 0;
+    }
+    &__title{
+        @include section-title($dark-primary);
+    }
+    &__description{
+        @include section-description($gray-dark);
+    }
+}
