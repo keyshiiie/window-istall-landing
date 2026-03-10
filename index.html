@@ -36,7 +36,7 @@
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Модели</a>
+                <a href="#models" class="header__nav-link">Модели</a>
               </li>
               <li class="header__nav-item">
                 <a href="#" class="header__nav-link">Калькулятор</a>
@@ -115,12 +115,77 @@
         </div>
       </div>
     </main>
+    <section class="trade-in">
+      <div class="container">
+        <div class="trade-in__content">
+          <h2 class="trade-in__title">Оконный TRADE-IN</h2>
+          <p class="trade-in__description">Получи скидку 10% за старое окно! Обменяй старое окно на скидку 10%!</p>
+          <div class="trade-in__calculator">
+              <div class="trade-in__calculator-row">
+                <input type="tel" class="trade-in__calculator-input" placeholder="+7 (___) ___-__-__">
+                <button class="trade-in__calculator-button button button--fill">Получить скидку 10%</button>
+              </div>
+              
+              <div class="trade-in__agreement">
+                <label class="trade-in__agreement-label">
+                  <input type="checkbox" class="trade-in__agreement-checkbox">
+                  <span class="trade-in__agreement-text">Даю согласие на обработку персональных данных</span>
+                </label>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="models" id="models">
+      <div class="container">
+        <div class="models__content">
+          <div class="models__header">
+            <h2 class="models__title">Выберите свою модель окна</h2>
+            <p class="models__description">Мы знаем, как отличаются потребности жителей спальных и центральных районов, загородных домов и офисов.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="slider">
+      <div class="container">
+        <div class="slider__content">
+          <!-- Левая колонка с навигацией -->
+          <div class="slider__nav">
+            <ul class="slider__nav-list">
+              <!-- Пункты будут вставляться через JS -->
+            </ul>
+          </div>
+          <!-- Правая колонка с контентом -->
+          <div class="slider__display">
+            <div class="slider__wrapper">
+              <!-- Слайды будут вставляться сюда -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="characteristic">
+      <div class="container">
+        <div class="characteristic__top">
+          <div class="characteristic__header">
+            <h2 class="characteristic__title">Сравните характеристики — <br> выберите лучшее!</h2>
+          </div>
+        </div>
+        <div class="characteristic__bottom">
+          <div class="characteristic__card-holder">
+            <!-- Карточки будут вставлены через JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="container">
         
       </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
