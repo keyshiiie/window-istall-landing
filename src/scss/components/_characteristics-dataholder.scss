@@ -28,6 +28,7 @@
 
     &__list {
         list-style: none;
+        line-height: 2;
         padding: 0;
         margin-bottom: 30px;
         width: 100%;
@@ -36,7 +37,6 @@
         &-item {
             @include font-style(light, xs);
             color: $gray-primary;
-            padding: 3px 0;
             text-align: center;
             
             &:last-child {
@@ -105,19 +105,19 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid $white-hover;
+    border: 2px solid $white-hover;
     cursor: pointer;
     transition: all 0.3s ease;
     flex-shrink: 0;
     
     // Стили для активной кнопки
     &.active {
-        border-color: $gray-dark;
+        border-color: $blue-accent;
         transform: scale(1.1);
     }
     
     &:hover {
         transform: scale(1.1);
-        border-color: $gray-dark;
+        border-color: $blue-accent;
     }
 }
