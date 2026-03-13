@@ -64,26 +64,21 @@
     }
 
     &__calculator{
-
         &-row{
             @extend %calculator-row;
         }
-
         &-input{
             @extend %calculator-input;
         }
-    }
-
-    &__agreement{
-        &-label{
-            @extend %agreement-label;
-        }
-
-        // Прячем стандартный чекбокс
-        &-checkbox{
-            @extend %agreement-checkbox-hidden;
+        &-agreement{
+            &__label{
+                @extend %agreement-label;
+            }
+            &__checkbox{
+                @extend %agreement-checkbox-hidden;
             }
         }
+    }
 
     &__gift{
         @include flex($align:center);

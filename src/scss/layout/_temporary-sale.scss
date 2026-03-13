@@ -26,17 +26,14 @@
         &-input{
             @extend %calculator-input;
         }
-        &-button{
-            @include button-fill($white, $white-hover, $blue-accent);
-        }
-    }
-    &__agreement{
-        &-label{
-            @extend %agreement-label;
-            justify-content: center;
-        }
-        &-checkbox{
-            @extend %agreement-checkbox-hidden;
+        &-agreement{
+            &__label{
+                @extend %agreement-label;
+                justify-content: center;
+            }
+            &__checkbox{
+                @extend %agreement-checkbox-hidden;
+            }
         }
     }
 }

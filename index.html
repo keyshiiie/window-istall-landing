@@ -76,18 +76,7 @@
               <p class="main__description">Успейте получить максимальную скидку + подарок</p>
             </div>
             <!-- Форма расчета -->
-            <div class="main__calculator">
-              <div class="main__calculator-row">
-                <input type="tel" class="main__calculator-input" placeholder="+7 (___) ___-__-__">
-                <button class="main__calculator-button button button--fill">Рассчитать со скидкой 65%</button>
-              </div>
-              <div class="main__agreement">
-                <label class="main__agreement-label">
-                  <input type="checkbox" class="main__agreement-checkbox">
-                  <span class="main__agreement-text">Даю согласие на обработку персональных данных</span>
-                </label>
-              </div>
-            </div>
+            <window-form class="main__calculator" discount="65" form-type="main"></window-form>
             <!-- Подарок -->
             <div class="main__gift">
               <img src="/images/icons/gift.svg" alt="Подарок" class="main__gift-icon">
@@ -121,18 +110,7 @@
           <h2 class="trade-in__title">Оконный TRADE-IN</h2>
           <p class="trade-in__description">Получи скидку 10% за старое окно! Обменяй старое окно на скидку 10%!</p>
           <!-- Форма рассчета -->
-          <div class="trade-in__calculator">
-            <div class="trade-in__calculator-row">
-              <input type="tel" class="trade-in__calculator-input" placeholder="+7 (___) ___-__-__">
-              <button class="trade-in__calculator-button button button--fill">Получить скидку 10%</button>
-            </div>
-            <div class="trade-in__agreement">
-              <label class="trade-in__agreement-label">
-                <input type="checkbox" class="trade-in__agreement-checkbox">
-                <span class="trade-in__agreement-text">Даю согласие на обработку персональных данных</span>
-              </label>
-            </div>
-          </div>
+          <window-form class="trade-in__calculator" discount="10" form-type="trade-in"></window-form>
         </div>
       </div>
     </section>
@@ -210,26 +188,28 @@
         </div>
       </div>
     </section>
-    <!-- Верхняя часть хедера -->
+    <!-- Временная скидка с таймером -->
     <section class="temporary-sale">
       <div class="container">
         <div class="temporary-sale__content">
           <p class="temporary-sale__description">Только до 31.01.2026г.</p>
           <h2 class="temporary-sale__title">Скидка 30%</h2>
           <div class="temporary-sale__timer"></div>
-          <div class="temporary-sale__calculator">
-            <div class="temporary-sale__calculator-row">
-              <input type="tel" class="temporary-sale__calculator-input" placeholder="+7 (___) ___-__-__">
-              <button class="temporary-sale__calculator-button button button--fill">Получить скидку 30%</button>
-            </div>
-            <div class="temporary-sale__agreement">
-              <label class="temporary-sale__agreement-label">
-                <input type="checkbox" class="temporary-sale__agreement-checkbox">
-                <span class="temporary-sale__agreement-text">Даю согласие на обработку персональных данных</span>
-              </label>
-            </div>
-          </div>
+          <window-form class="temporary-sale__calculator" discount="30" form-type="temporary"></window-form>
         </div>
+      </div>
+    </section>
+    <section class="installment">
+      <div class="container">
+        <div class="installment__header">
+          <p class="installment__description">Комфорт ещё доступнее</p>
+          <h2 class="installment__title">Рассрочка 0%<br>на пластиковые окна</h2>
+        </div>
+        <div class="installment__conditions">
+          <!-- Через TS вставка карточек с условиями -->
+        </div>
+        <p class="installment__hint">Оставьте заявку прямо сейчас и получите скидку 30%</p>
+        <window-form class="installment__calculator" discount="30" form-type="installment"></window-form>
       </div>
     </section>
     <footer class="footer">
