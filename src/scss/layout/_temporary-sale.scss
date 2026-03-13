@@ -2,16 +2,21 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/placeholders' as *;
 
-.trade-in {
+.temporary-sale{
     @include flex($direction: column, $align: center);
     padding: 70px 0;
     background-color: $blue-accent;
-    
+
     &__description {
         @include section-description($white);
     }
     &__title {
         @include section-title($white);
+    }
+    &__timer{
+        text-align: center;
+        @include font-style(light, lg);
+        color: $white;
     }
     &__calculator{
         &-row{

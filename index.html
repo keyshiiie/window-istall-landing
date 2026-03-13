@@ -7,6 +7,7 @@
     <title>Пластика окон</title>
   </head>
   <body>
+    <!-- Шапка -->
     <header class="header">
       <div class="container">
         <!-- Верхняя часть хедера -->
@@ -61,6 +62,7 @@
         </div>
       </div>
     </header>
+    <!-- Главная -->
     <main class="main">
       <div class="container">
         <div class="main__content">
@@ -73,14 +75,12 @@
               </h1>
               <p class="main__description">Успейте получить максимальную скидку + подарок</p>
             </div>
-            
             <!-- Форма расчета -->
             <div class="main__calculator">
               <div class="main__calculator-row">
                 <input type="tel" class="main__calculator-input" placeholder="+7 (___) ___-__-__">
                 <button class="main__calculator-button button button--fill">Рассчитать со скидкой 65%</button>
               </div>
-              
               <div class="main__agreement">
                 <label class="main__agreement-label">
                   <input type="checkbox" class="main__agreement-checkbox">
@@ -88,14 +88,13 @@
                 </label>
               </div>
             </div>
-            
             <!-- Подарок -->
             <div class="main__gift">
               <img src="/images/icons/gift.svg" alt="Подарок" class="main__gift-icon">
               <span class="main__gift-text">Подоконник в подарок</span>
             </div>
           </div>
-        
+          <!-- Правая часть с карточкой -->
           <div class="main__right">
             <div class="main__cards">
               <div class="main__card">
@@ -115,27 +114,29 @@
         </div>
       </div>
     </main>
+    <!-- Обмен окна -->
     <section class="trade-in">
       <div class="container">
         <div class="trade-in__content">
           <h2 class="trade-in__title">Оконный TRADE-IN</h2>
           <p class="trade-in__description">Получи скидку 10% за старое окно! Обменяй старое окно на скидку 10%!</p>
+          <!-- Форма рассчета -->
           <div class="trade-in__calculator">
-              <div class="trade-in__calculator-row">
-                <input type="tel" class="trade-in__calculator-input" placeholder="+7 (___) ___-__-__">
-                <button class="trade-in__calculator-button button button--fill">Получить скидку 10%</button>
-              </div>
-              
-              <div class="trade-in__agreement">
-                <label class="trade-in__agreement-label">
-                  <input type="checkbox" class="trade-in__agreement-checkbox">
-                  <span class="trade-in__agreement-text">Даю согласие на обработку персональных данных</span>
-                </label>
-              </div>
+            <div class="trade-in__calculator-row">
+              <input type="tel" class="trade-in__calculator-input" placeholder="+7 (___) ___-__-__">
+              <button class="trade-in__calculator-button button button--fill">Получить скидку 10%</button>
             </div>
+            <div class="trade-in__agreement">
+              <label class="trade-in__agreement-label">
+                <input type="checkbox" class="trade-in__agreement-checkbox">
+                <span class="trade-in__agreement-text">Даю согласие на обработку персональных данных</span>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- Модели окон (заголовок)-->
     <section class="models" id="models">
       <div class="container">
         <div class="models__content">
@@ -143,28 +144,29 @@
             <h2 class="models__title">Выберите свою модель окна</h2>
             <p class="models__description">Мы знаем, как отличаются потребности жителей спальных и центральных районов, загородных домов и офисов.</p>
           </div>
-
         </div>
       </div>
     </section>
+    <!-- Модели окон (слайдер) -->
     <section class="slider">
       <div class="container">
         <div class="slider__content">
           <!-- Левая колонка с навигацией -->
           <div class="slider__nav">
             <ul class="slider__nav-list">
-              <!-- Пункты будут вставляться через JS -->
+              <!-- Пункты будут вставляться через TS -->
             </ul>
           </div>
           <!-- Правая колонка с контентом -->
           <div class="slider__display">
             <div class="slider__wrapper">
-              <!-- Слайды будут вставляться сюда -->
+              <!-- Слайды будут вставляться сюда через TS-->
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Характеристики моделей -->
     <section class="characteristic">
       <div class="container">
         <div class="characteristic__top">
@@ -179,6 +181,7 @@
         </div>
       </div>
     </section>
+    <!-- Преимущества компании -->
     <section class="benefits">
       <div class="container">
         <h2 class="benefits__title">Почему выбирают «Пластику Окон»?</h2>
@@ -187,15 +190,14 @@
         </div>
       </div>
     </section>
+    <!-- Калькулятор монтажа окон -->
     <section class="calculator">
       <div class="container">
         <h2 class="calculator__title">Калькулятор пластиковых окон — <br>размеры и цены</h2>
-        
         <div class="calculator__content">
           <div class="calculator__form">
             <!-- Секции будут вставлены через JS -->
           </div>
-          
           <div class="calculator__result">
             <div class="calculator__result-card">
               <h3 class="calculator__result-title">Итого:</h3>
@@ -203,6 +205,28 @@
                 <span class="calculator__result-value">0</span>
                 <span class="calculator__result-currency">₽</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Верхняя часть хедера -->
+    <section class="temporary-sale">
+      <div class="container">
+        <div class="temporary-sale__content">
+          <p class="temporary-sale__description">Только до 31.01.2026г.</p>
+          <h2 class="temporary-sale__title">Скидка 30%</h2>
+          <div class="temporary-sale__timer"></div>
+          <div class="temporary-sale__calculator">
+            <div class="temporary-sale__calculator-row">
+              <input type="tel" class="temporary-sale__calculator-input" placeholder="+7 (___) ___-__-__">
+              <button class="temporary-sale__calculator-button button button--fill">Получить скидку 30%</button>
+            </div>
+            <div class="temporary-sale__agreement">
+              <label class="temporary-sale__agreement-label">
+                <input type="checkbox" class="temporary-sale__agreement-checkbox">
+                <span class="temporary-sale__agreement-text">Даю согласие на обработку персональных данных</span>
+              </label>
             </div>
           </div>
         </div>
