@@ -28,6 +28,8 @@
         font-size: $font-size-xl;
     } @else if $size == xxl {
         font-size: $font-size-xxl;
+    } @else if $size == xxxl {
+        font-size: $font-size-xxxl;
     }
 }
 

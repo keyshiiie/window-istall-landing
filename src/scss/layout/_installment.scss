@@ -3,7 +3,6 @@
 @use '../abstracts/placeholders' as *;
 
 .installment {
-    @include flex($direction: column, $align: center);
     padding: 70px 0;
     background-color: $white;
     
@@ -16,6 +15,26 @@
     &__hint {
         @include font-style(light, lg);
         color: $dark-primary;
+        text-align: center;
+    }
+    &__card{
+        text-align: center;
+        
+        &-holder{
+        @include flex(space-between, center);
+        margin: 30px 0 50px 0;
+        line-height: 1;
+        }
+        
+        &-title{
+            @include font-style(bold, xxxl);
+            color: $blue-accent;
+            margin-bottom: 10px;
+        }
+        &-description{
+            @include font-style(bold, lg);
+        }
+        
     }
     &__calculator{
         &-row{
