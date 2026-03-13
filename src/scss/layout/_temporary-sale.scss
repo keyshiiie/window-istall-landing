@@ -35,5 +35,8 @@
                 @extend %agreement-checkbox-hidden;
             }
         }
+        &-button{
+            @include button-fill($white, $white-hover, $blue-accent);
+        }
     }
 }
